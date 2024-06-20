@@ -1,5 +1,5 @@
 # PetCia Front-End
-Página web desenvolvida para a cadeira de Fundamentos de Sistemas Web pela PUCRS. Desenvolvido por **Tom Francisco da Rosa** (tomilho). Disponível em tomilho.github.io/pucrs-petcia.
+Página web desenvolvida para a cadeira de Fundamentos de Sistemas Web pela PUCRS. Desenvolvido por **Tom Francisco da Rosa** (tomilho). Disponível em [tomilho.github.io/pucrs-petcia](https://tomilho1.github.io/pucrs-petcia/).
 
 ## Requisitos
 - Header com links de navegação
