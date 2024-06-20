@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCia 😸🤠</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Carrinho -->
+    <div id="cart">
+        <div class="card-header"> Carrinho de Compras </div>
+        <ul class="list-group list-group-flush" id="cart-items"></ul>
+        <div class="card-footer">Total: R$ <span id="total-price">0.00</span><a href="index.html"><button class="btn btn-primary btn-sm mt-2 finalizar">Finalizar</button></a>
+        </div>
+      </div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">PetCia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="goods.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Produtos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="goods.html">Ração - Cachorro</a>
+                        <a class="dropdown-item" href="goods.html#racao-gato">Ração - Gato</a>
+                        <a class="dropdown-item" href="goods.html#higiene">Higiene</a>
+                        <a class="dropdown-item" href="goods.html#acessorios">Acessórios</a>
+                    </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Serviços
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="agendamento.html">Banho</a>
+                        <a class="dropdown-item" href="agendamento.html">Tosa</a>
+                        <a class="dropdown-item" href="agendamento.html">Adestramento</a>
+                        <a class="dropdown-item" href="agendamento.html">Hotel Pet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>header space</h2>
+    <p>header space</p>
+
+    <!-- Carrossel de Banners -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1200x200?text=Banner+1" class="d-block w-100" alt="Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x200?text=Banner+2" class="d-block w-100" alt="Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x200?text=Banner+3" class="d-block w-100" alt="Banner 3">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+
+    <!-- Produtos Em Destaque  -->
+    <div class="container mt-5" id="destaques">
+        <h2 class="mb-2">Destaques</h2>
+        <div class="row goods-row">
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Golden Gatos Castrados - 1kg', 30.00)">
+                    <div class="card-body">
+                        <img src="img-goods/golden-cat-dry1.jpg" class="cardImg">
+                        <h6 class="card-title">Ração Golden Para Gatos Castrados - 1kg</h6>
+                        <h4 class="card-text">R$30.00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Granplus Patê Gourmet Sabor Ovelha - 300g', 10.99)">
+                    <div class="card-body">
+                        <img src="img-goods/granplus-dog-wet1.jpg" class="cardImg">
+                        <h6 class="card-title">Granplus Patê Gourmet Sabor Ovelha - 300g</h6>
+                        <h4 class="card-text">R$10,99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Coleira Zee.Dog Para Cães', 66.00)">
+                    <div class="card-body">
+                        <img src="img-goods/zeedog-collar.jpg" class="cardImg">
+                        <h6 class="card-title">Coleira Zee.Dog Canyon Naturals</h6>
+                        <h4 class="card-text">R$66,00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Whiskas Sachê Sabor Carne - 85g', 3.50)">
+                    <div class="card-body">
+                        <img src="img-goods/whiskas-cat-wet1.jpg" class="cardImg">
+                        <h6 class="card-title">Whiskas Sachê Sabor Carne - 85g</h6>
+                        <h4 class="card-text">R$3,50</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produtos Mais Vendidos  -->
+    <div class="container mt-5 mb-5" id="mais-vendidos">
+        <h2 class="mb-2">Mais Vendidos</h2>
+        <div class="row goods-row">
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Whiskas Sachê Sabor Carne - 85g', 3.50)">
+                    <div class="card-body">
+                        <img src="img-goods/whiskas-cat-wet1.jpg" class="cardImg">
+                        <h6 class="card-title">Whiskas Sachê Sabor Carne - 85g</h6>
+                        <h4 class="card-text">R$3,50</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Ração Golden Fórmula Sabor Carne - 1kg', 22.90)">
+                    <div class="card-body">
+                        <img src="img-goods/golden-dog-dry1.jpg" class="cardImg">
+                        <h6 class="card-title">Ração Golden Fórmula Sabor Carne - 1kg</h6>
+                        <h4 class="card-text">R$22.90</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Areia Higiênica Pipicat - 1,8kg', 24.00)">
+                    <div class="card-body">
+                        <img src="img-goods/pipicat.jpg" class="cardImg">
+                        <h6 class="card-title">Areia Higiênica Para Gatos Pipicat - 1,8kg</h6>
+                        <h4 class="card-text">R$24,00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="addGood('Golden Sachê Gourmet Sabor Carne - 85g', 4.00)">
+                    <div class="card-body">
+                        <img src="img-goods/golden-dog-wet1.jpg" class="cardImg">
+                        <h6 class="card-title">Golden Sachê Gourmet Sabor Carne - 85g</h6>
+                        <h4 class="card-text">R$4,00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 PetCia - <a href="https://github.com/tomilho1">tomilho</a></p>
+        <p>Endereço: Rua dos Bichos, 333 - Porto Alegre, RS</p>
+        <p>Telefone: (51) 1234-5678</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Funcionalidades do Carrinho -->
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+    
+        function addGood(nomeDoItem, preco) {
+          cart.push({ name: nomeDoItem, price: preco });
+          totalPrice += preco;
+          updateCart();
+        }
+    
+        function removeGood(index) {
+          totalPrice -= cart[index].price;
+          cart.splice(index, 1);
+          updateCart();
+        }
+    
+        function updateCart() {
+          const cartElement = document.getElementById('cart');
+          const cartItemsElement = document.getElementById('cart-items');
+          const totalPriceElement = document.getElementById('total-price');
+    
+          cartItemsElement.innerHTML = '';
+          cart.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+            
+            listItem.innerHTML = `
+              ${item.name} - R$ ${item.price.toFixed(2)}
+              <button class="btn btn-danger btn-sm" onclick="removeGood(${index})">-</button>
+            `;
+            cartItemsElement.appendChild(listItem);
+          });
+    
+          totalPriceElement.textContent = totalPrice.toFixed(2);
+    
+          if (cart.length > 0) {
+            cartElement.style.display = 'block';
+          } else {
+            cartElement.style.display = 'none';
+          }
+        }
+      </script>
+</body>
+</html>

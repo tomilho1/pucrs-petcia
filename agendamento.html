@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">PetCia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="goods.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Produtos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="goods.html">Ração - Cachorro</a>
+                        <a class="dropdown-item" href="goods.html#racao-gato">Ração - Gato</a>
+                        <a class="dropdown-item" href="goods.html#higiene">Higiene</a>
+                        <a class="dropdown-item" href="goods.html#acessorios">Acessórios</a>
+                    </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Serviços
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="agendamento.html">Banho</a>
+                        <a class="dropdown-item" href="agendamento.html">Tosa</a>
+                        <a class="dropdown-item" href="agendamento.html">Adestramento</a>
+                        <a class="dropdown-item" href="agendamento.html">Hotel Pet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>header space</h2>
+    <p>header space</p>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Agendamento</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="servico">Selecione o serviço:</label>
+                    <select class="form-control" id="servico">
+                        <option value="banho">Banho (R$60)</option>
+                        <option value="tosa">Tosa (R$55)</option>
+                        <option value="tosa">Banho e tosa (R$100)</option>
+                        <option value="tosa">Adestramento (a partir de R$150/sessão)</option>
+                        <option value="hotel">Hotel Pet (R$40/dia)</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nomePet">Nome do pet:</label>
+                    <input type="text" class="form-control" id="nomePet">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="racaPet">Espécie:</label>
+                    <input type="text" class="form-control" id="racaPet">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="especiePet">Raça:</label>
+                    <input type="text" class="form-control" id="especiePet">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="idadePet">Idade:</label>
+                    <input type="text" class="form-control" id="idadePet">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pesoPet">Peso:</label>
+                    <input type="text" class="form-control" id="pesoPet">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="tempePet">Temperamento:</label>
+                    <input type="text" class="form-control" id="tempePet">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col md-6">
+                    <label for="dataAgendamento">Data de agendamento:</label>
+                    <input type="date" class="form-control" id="dataAgendamento">
+                </div>
+                <div class="form-group col md-6">
+                    <label for="dataAgendamento">Horário:</label>
+                    <input type="time" class="form-control" id="horaAgendamento">
+                </div>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="buscaCheck">
+                <label class="form-check-label" for="buscaCheck">Serviço de busca do pet:</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" disabled>
+            </div>
+            <div class="form-group">
+                <label for="obs">Observações:</label>
+                <textarea class="form-control" id="obs"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary agendar" style="margin-left: 25%;">Agendar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const checkbox = document.getElementById('buscaCheck');
+        const enderecoInput = document.getElementById('endereco');
+    
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                enderecoInput.removeAttribute('disabled');
+            } else {
+                enderecoInput.setAttribute('disabled', 'true');
+            }
+        });
+    </script>
+</body>
+</html>

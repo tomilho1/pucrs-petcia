@@ -1,0 +1,23 @@
+/* Carrinho */
+#cart {
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+
+    z-index: 2000;
+
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 350px;
+
+    display: none;
+
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.finalizar {
+    width: 100%;
+}

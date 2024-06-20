@@ -1,0 +1,75 @@
+/* Header */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #6c757d;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #6c757d;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #e9ecef;
+    transition: 0.3s ease;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: #ffffff; /* White background for dropdown */
+    border: 2px solid #6c757d; /* Dark grey border */
+    border-radius: 2%;
+}
+
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    color: #6c757d;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover,
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:focus {
+    background-color: #e9ecef; /* Light grey background on hover/focus */
+    color: #343a40; /* Slightly darker grey on hover/focus */
+}
+
+/* Ativar dropdown por hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transform: translateY(-2px); /* Ajustando o menu para evitar que menu suma enquanto o mouse move da aba pro menu... */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox%3D"0 0 30 30" xmlns%3D"http://www.w3.org/2000/svg"%3E%3Cpath stroke%3D"rgba%2866, 66, 66, 0.5%29" stroke-width%3D"2" stroke-linecap%3D"round" stroke-miterlimit%3D"10" d%3D"M4 7h22M4 15h22M4 23h22"%3E%3C/path%3E%3C/svg%3E');
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}

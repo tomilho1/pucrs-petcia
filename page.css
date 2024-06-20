@@ -1,0 +1,51 @@
+/* Diagramação geral */
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Carrossel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+/* Produtos */
+.goods-row {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Página de Serviços */
+.services-title {
+    font-size: 3rem;
+}
+
+#services-page {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.img-col {
+    padding: 0;
+}
+
+.text-col {
+    padding: 0;
+}
+
+#img-banho {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-left: 0;
+}
+
+.agendar {
+    width: 50%;
+    font-weight: bold;
+}
+
+.agendar {
+    transition: 0.1s ease-in-out;
+}
